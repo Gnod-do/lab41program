@@ -1,5 +1,7 @@
 package People;
 
+import Behavior.ITalk;
+
 import java.util.Objects;
 
 public class Tourist extends Human{
@@ -7,6 +9,28 @@ public class Tourist extends Human{
         super(name, gender);
     }
 
+    public class Newperson extends Tourist implements ITalk {
+        public Newperson(String name, String gender){
+            super(name, gender);
+        }
+
+        @Override
+        public void Talk(String with, String about){
+            System.out.println(this.getName() + " talk with " + with + about + ".");
+        }
+
+    }
+
+    public static class AnotherPerson extends Tourist {
+        public AnotherPerson(String name, String gender){
+            super(name, gender);
+        }
+
+        public static void Present(String where){
+            System.out.println("Another person presents " + where);
+        }
+
+    }
     @Override
     public String toString(){
         return this.getName() + this.getGender();

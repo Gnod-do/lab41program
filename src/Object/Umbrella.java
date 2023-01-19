@@ -1,8 +1,11 @@
 package Object;
 
 import Behavior.ITransform;
+import checkException.TransformException;
 
 import java.util.Objects;
+
+import static Object.Status.TRANSFORMED_STATE;
 
 public class Umbrella extends Object implements ITransform {
     public Table table;
@@ -12,7 +15,8 @@ public class Umbrella extends Object implements ITransform {
     }
 
     @Override
-    public void Transform(Status status){
+    public void Transform(Status status) throws TransformException {
+        if (status != TRANSFORMED_STATE ) throw new TransformException();
         System.out.println("The umbrella spread out");
         System.out.println(this.getName() + "has changed its status to " + status);
         System.out.println(this.getName() + "has turned into " + "table and chair ");
