@@ -28,10 +28,10 @@ public class Shpuntik extends Human implements ISitdown, ILegBend, ILeave, IAsk 
         System.out.println(this.getName() + " ask " + who + " about " + about);
     }
 
-    public void Feel(String how){
-        if (how == null) throw  new PushException();
-        System.out.println(this.getName() + " don't feel " + how + ".");
-    }
+//    public void Feel(String how){
+//        if (how == null) throw  new PushException();
+//        System.out.println(this.getName() + " don't feel " + how + ".");
+//    }
 
 
 

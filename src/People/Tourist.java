@@ -20,7 +20,7 @@ public class Tourist extends Human{
         }
 
     }
-
+//Static class
     public static class AnotherPerson extends Tourist {
         public AnotherPerson(String name, String gender){
             super(name, gender);
@@ -29,7 +29,6 @@ public class Tourist extends Human{
         public static void Present(String where){
             System.out.println("Another person presents " + where);
         }
-
     }
     @Override
     public String toString(){

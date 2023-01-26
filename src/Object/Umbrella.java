@@ -14,6 +14,7 @@ public class Umbrella extends Object implements ITransform {
         super(name, color, status);
     }
 
+//    unchecked exception
     @Override
     public void Transform(Status status) throws TransformException {
         if (status != TRANSFORMED_STATE ) throw new TransformException();
